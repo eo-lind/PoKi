@@ -162,3 +162,19 @@ LEFT JOIN Gender g ON a.GenderId = g.Id
 WHERE e.Name = 'joy'
 GROUP BY g.Name, e.Name
 ORDER BY 'Number of Fearful Poems' ASC;
+
+--THURSDAY lightning exercise
+-- How many authors are named "alice"?
+SELECT
+	Name,
+	COUNT(Id) AS 'Total'
+FROM Author
+WHERE Name = 'alice'
+GROUP BY Name;
+
+-- find all the poems that contain the word "horse"
+SELECT
+	Title,
+	Text
+FROM Poem
+WHERE Text LIKE '%horse%';
